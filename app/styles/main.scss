@@ -1,0 +1,99 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #343843;
+    padding: 0;
+    margin: 0;
+}
+.hidden {
+    display: none;
+} 
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.button {
+    background-color: transparent;
+    color:#939aaa;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border:2px solid #939aaa;
+    border-radius: 3px;
+    padding: 6px 60px;
+    cursor: pointer; 
+
+    &_warning {
+        background-color: #ff3b30;
+        color:#fff;
+        border:none;
+    }
+}
+.pop-up {
+    position:fixed;
+    top:50%;
+    left: 50%;
+    width: 500px;
+    height: 350px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255,255,255, 0.9);
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 140px 40px 25px;
+    
+    &__close-icon {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width:25px;
+        height:25px;
+        background: url("../img/icons/icon-popup-close.svg") no-repeat 50% 50%;
+        background-size: contain;
+        border-radius: 50%;
+        border:none;
+        cursor: pointer;
+    }
+
+    &__notify-icon {
+        position:absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 110px;
+        height: 110px;
+        background: url("../img/icons/icon-warning_notify-red.svg") no-repeat 50% 50%;
+        background-size: contain;
+    }
+
+    &__message {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    &__block-buttons {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+}
+  
+@keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform:translate(-50%, -50%) scale(0.3, 0.3) ;
+    }
+  
+    50% {
+      opacity: 1;
+      transform:translate(-50%, -50%);
+    }
+}
+
+.zoomIn {
+    animation: zoomIn 1s linear;
+}
+  
