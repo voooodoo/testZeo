@@ -24,12 +24,23 @@ body {
     border-radius: 3px;
     padding: 6px 60px;
     cursor: pointer; 
+    transition: all 0.3s;
+
+    &:hover {
+        background-color: #939aaa;
+        color: #fff;
+    }
 
     &_warning {
         background-color: #ff3b30;
         color:#fff;
         border:none;
+        
+        &:hover {
+            background-color: #D13128
+        }
     }
+
 }
 .pop-up {
     position:fixed;
@@ -37,6 +48,9 @@ body {
     left: 50%;
     width: 500px;
     height: 350px;
+    max-width: 90vw;
+    max-height: 90vh;
+    min-width: 400px;
     transform: translate(-50%, -50%);
     background-color: rgba(255,255,255, 0.9);
     border-radius: 5px;
@@ -82,9 +96,9 @@ body {
 }
   
 @keyframes zoomIn {
-    from {
+    0% {
       opacity: 0;
-      transform:translate(-50%, -50%) scale(0.3, 0.3) ;
+      transform:translate(-50%, -50%) scale3d(0.3, 0.3, 0.3) ;
     }
   
     50% {
@@ -94,6 +108,6 @@ body {
 }
 
 .zoomIn {
-    animation: zoomIn 1s linear;
+    animation: zoomIn 0.5s linear;
 }
   
