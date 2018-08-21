@@ -31,7 +31,7 @@ function closePopUp() {
 
 function action() {
     closePopUp();
-    setTimeout(()=> alert('Done'),0);
+    alert('Done');
 }
 
 document.addEventListener('click', function (event) {
